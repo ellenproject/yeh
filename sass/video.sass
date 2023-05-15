@@ -1,0 +1,279 @@
+*
+    margin: 0
+    padding: 0
+
+body
+    position: relative
+    min-height: 100%
+    margin: 0 2.5rem
+    top: 0px
+    line-height: 1.7
+    font-family: 'Open Sans', sans-serif
+
+    .sectiontop
+        height: 100vh
+        box-sizing: border-box
+        display: block
+        position: relative
+        @media screen and ( max-width: 768px )
+            height: 50vh
+        .topWrapper
+            height: 85%
+            max-width: 1200px
+            margin: 0 auto
+            justify-content: center
+            flex-direction: column
+            display: flex
+            .aboutbox
+                padding: 3.5% 8em
+                background: #f8f9f9
+                @media screen and ( max-width: 768px )
+                    padding: 0
+                    display: none
+                .about
+                    background-color: transparent
+                    cursor: pointer
+                    position: relative
+                    text-decoration: none
+                    &:hover
+                        .sentence
+                            transition: all .3s ease-in-out
+                            color: #cfcfcf
+                            opacity: 100%
+                    img
+                        width: 100%
+                        @media screen and ( max-width: 768px )
+                            width: auto
+                            height: 75vh
+                            max-width: 100%
+                            object-fit: cover
+                    .box
+                        padding: 100px
+                        background: #212529
+                        width: 50%
+                        margin: 0 auto
+                        text-decoration: none
+                        text-align: center
+                        color: #fff
+                        font-family: 'PT Sans', sans-serif
+                        @media screen and ( max-width: 768px )
+                            width: auto
+                            height: 75vh
+                            max-width: 100%
+                            object-fit: cover
+                        .description
+                            margin-top: 30px
+            .resume
+                text-decoration: none
+                color: #cfcfcf
+                text-align: center
+                display: none
+                @media screen and ( max-width: 768px )
+                    display: block
+        .logoWrapper
+            display: flex
+            height: 8%
+            justify-content: center
+            text-decoration: none
+            .logo
+                height: 100%
+                max-width: unset
+            .navbar-head
+                text-decoration: none
+                color: #212529
+                font-family: 'Bebas Neue', cursive
+        nav
+            // background: #bbb
+            // max-width: 1200px
+            // margin: 0 auto
+            // min-height: 3rem
+            // padding: 1rem 0
+            // overflow: auto
+            // width: 100%
+            // justify-content: center
+            // align-items: center
+            // flex-direction: column
+            // display: flex
+            // white-space: nowrap
+            position: absolute
+            width: 100%
+            background: #fff
+            box-shadow: 0px 5px 15px #f2f2f2
+            z-index: 1
+            left: 0
+            @media screen and ( max-width: 768px )
+                white-space: nowrap
+                display: flex
+            .navbar
+                // display: flex
+                // white-space: nowrap
+                // width: 100%
+                // max-width: 96rem
+                // justify-content: center
+                list-style: none
+                @media screen and ( max-width: 768px )
+                    display: block
+                    /*隱藏選單開始*/
+                    max-height: 0px
+                    overflow: hidden
+                    /*隱藏選單結束*/
+                    transition: max-height 1.5s
+                    margin-top: 1px
+                    padding-left: 0
+                    /*絕對定位疊在網頁上*/
+                    position: absolute
+                    z-index: 100
+                    /*header 80px+1px boder 線條*/
+                    top: 20px
+                    left: 0
+                    right: 0
+                    /*left跟right寫0，呈現滿版*/
+                    background: #FFF
+                li
+                    float: left
+                    text-align: center
+                    width: 20%
+                    @media screen and ( max-width: 768px )
+                        display: block
+                        float: none
+                        border-bottom: 1px dashed #212529
+                        margin-left: 0
+                    a
+                        // transition: color .15s ease-in-out
+                        // margin: 0 1rem
+                        // opacity: 1
+                        // font-size: 1rem
+                        // color: #333
+                        // text-decoration: none
+                        // height: 100%
+                        // display: inline-block
+                        padding: 30px
+                        display: block
+                        text-decoration: none
+                        text-transform: uppercase
+                        color: #111
+                        &:hover
+                            color: #666
+                        @media screen and ( max-width: 768px )
+                            transition: all .5s
+            .showmenu
+                display: none
+                @media screen and ( max-width: 768px )
+                    display: block
+                    float: right
+                    margin: 1em
+                    z-index: 1030
+            .menu-show
+                @media screen and ( max-width: 768px )
+                    max-height: 2000px
+        .fixed
+            position: fixed
+            top: 0
+    .content
+        margin-top: 10rem
+        .video-gallery
+            // display: grid
+            // grid-template-columns: reapeat(auto-fit, minmax(370px, 1fr))
+            grid-gap: 15px
+            display: flex
+            // max-width: 1100px
+            justify-content: center
+            padding: 15px
+            margin: 0 auto
+            box-sizing: border-box
+            .gallery-item
+                width: 32%
+                position: relative
+                height: 300px
+                background: #000
+                cursor: pointer
+                overflow: hidden
+                @media screen and ( max-width: 768px )
+                    width: 100%
+                &:hover
+                    img
+                        opacity: 0.3
+                        transform: translate3d(-10%, 0, 0,)
+                    .gallery-item-caption
+                        h2
+                            &::after
+                                transform: translate3d(0, 0, 0)
+                        p
+                            opacity: 1
+                            transform: translate3d(0, 0, 0)
+                img
+                    position: relative
+                    display: block
+                    width: 115%
+                    height: 300px
+                    object-fit: cover
+                    opacity: 0.5
+                    transition: all 350ms ease-in-out
+                    transform: translate3d(-23px, 0, 0)
+                .gallery-item-caption
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    text-align: left
+                    padding: 32px
+                    font-size: 1em
+                    color: #fff
+                    text-transform: uppercase
+                    h2
+                        font-weight: 300
+                        overflow: hidden
+                        padding: 12px 0
+                        position: relative
+                        margin: 0
+                        z-index: 1
+                        pointer-events: none
+                        &::after
+                            content: ""
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 15%
+                            height: 1px
+                            background: #FFF
+                            transition: transform 0.3s
+                            transform: translate3d(-100%, 0, 0)
+                    p
+                        letter-spacing: 1px
+                        font-size: 12px
+                        padding: 12px 0
+                        opacity: 0
+                        transition: opacity 0.35s, transform 0.35s
+                        transform: translate3d(10%, 0, 0)
+                        position: relative
+                        margin: 0
+                        z-index: 1
+                        pointer-events: none
+                    a
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+    .backtothefront
+        margin-top: 10rem
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 768px )
+            display: block
+            line-height: 5
+        .btn
+            margin: 8rem 0
+            .back, .go
+                text-decoration: none
+                color: #aaaaaa
+                border: 1px solid #aaaaaa
+                padding: 1rem
+                &:hover
+                    color: #cfcfcf
+                    border: 1px solid #cfcfcf
+                .fa-chevron-left
+                    margin-right: 20px
+                .fa-chevron-right
+                    margin-left: 20px
